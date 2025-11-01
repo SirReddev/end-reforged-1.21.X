@@ -18,8 +18,7 @@
 
 ### Screenshots
 
-![Screenshot 1](link-to-your-screenshot-1)
-![Screenshot 2](link-to-your-screenshot-2)
+![Screenshot 1]((https://media.discordapp.net/attachments/771453831695040523/1433996644541661305/image.png?ex=6906b8f2&is=69056772&hm=0d5a99f0cd2715b10a2d2dfcf25c7acacb6bd479621d84e4ce8b63f383af8f01&=&format=webp&quality=lossless))
 
 ### Installation
 
