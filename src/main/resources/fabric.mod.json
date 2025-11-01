@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "end_reforged",
+	"version": "${version}",
+	"name": "End Reforged",
+	"description": "Mod that overhauls the End Dimension by Reddev",
+	"authors": [
+		"Sir_Reddev"
+	],
+	"contact": {
+		"homepage": "https://reddev.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/end_reforged/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.reddev.end_reforged.EndReforged"
+		],
+		"fabric-datagen": [
+			"net.reddev.end_reforged.EndReforgedDataGenerator"
+		],
+      "Client": [
+        "net.reddev.end_reforged.EndReforgedClient"
+      ]
+	},
+	"mixins": [
+		"end_reforged.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.17.3",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
