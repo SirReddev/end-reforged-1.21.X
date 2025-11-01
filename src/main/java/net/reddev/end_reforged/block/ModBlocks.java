@@ -14,9 +14,14 @@ import net.reddev.end_reforged.EndReforged;
 
 public class ModBlocks {
 
-    public static final Block ENDSOIL_BLOCK = registerBlock("endsoil_block",
+    public static final Block END_SLATE_BLOCK = registerBlock("end_slate_block",
             new Block(AbstractBlock.Settings.create().strength(4f)
-                    .requiresTool().sounds(BlockSoundGroup.MUD)));
+                    .requiresTool().sounds(BlockSoundGroup.STONE)));
+
+    public static final Block END_NYLIUM_BLOCK = registerBlock("end_nylium_block",
+            new Block(AbstractBlock.Settings.create().strength(4f)
+                    .requiresTool().sounds(BlockSoundGroup.STONE)));
+
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
@@ -33,7 +38,8 @@ public class ModBlocks {
         EndReforged.LOGGER.info("Registering ModBlocks for " + EndReforged.Mod_ID);
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
-            entries.add(ModBlocks.ENDSOIL_BLOCK);
+            entries.add(ModBlocks.END_SLATE_BLOCK);
+            entries.add(ModBlocks.END_NYLIUM_BLOCK);
         });
     }
 }
