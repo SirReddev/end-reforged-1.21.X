@@ -1,4 +1,14 @@
 {
   "block.end_reforged.end_slate_block": "End Slate",
-  "block.end_reforged.end_nylium_block": "End Nylium"
+  "block.end_reforged.end_nylium_block": "End Nylium",
+  "block.end_reforged.deep_end_slate_block": "Deep End Slate",
+  "block.end_reforged.green_end_rock_block": "Green End Rock",
+  "block.end_reforged.deep_green_end_rock_block": "Deep Green End Rock",
+  "block.end_reforged.layered_end_rock_block": "Layered End Rock",
+  "block.end_reforged.deep_layered_end_rock_block": "Deep Layered End Rock",
+  "block.end_reforged.end_moss_block": "End Moss"
+
+
+
+
 }
