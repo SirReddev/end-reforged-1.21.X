@@ -28,3 +28,6 @@
 3. Download the latest `End Reforged` jar from the [releases](#) page.
 4. Place the jar file in your Minecraft `mods` folder.
 5. Launch Minecraft with the Fabric profile.
+
+
+### Made By Sir_Reddev
