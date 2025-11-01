@@ -2,8 +2,7 @@
 
 [![Fabric](https://img.shields.io/badge/Fabric-Compatible-brightgreen)](https://fabricmc.net/)
 [![Minecraft Version](https://img.shields.io/badge/Minecraft-1.21-blue)](#)
-[![License](https://img.shields.io/badge/License-MIT-lightgrey)](#)
-
+![All Rights Reserved](https://img.shields.io/badge/License-All%20Rights%20Reserved-red)
 ## Overview
 
 **End Reforged** is a Fabric mod that expands and enhances **The End** dimension in Minecraft. Explore new biomes, encounter unique mobs, and discover exciting structures while keeping the vanilla feel intact. This mod is built for **Fabric Loader** and is compatible with Fabric API.
