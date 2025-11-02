@@ -23,6 +23,9 @@
 		],
       "Client": [
         "net.reddev.end_reforged.EndReforgedClient"
+      ],
+      "terrablender": [
+        "net.reddev.end_reforged.world.biome.ModTerrablenderAPI"
       ]
 	},
 	"mixins": [

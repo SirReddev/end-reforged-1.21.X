@@ -62,17 +62,17 @@ public class ModBlocks {
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
-        return Registry.register(Registries.BLOCK, Identifier.of(EndReforged.Mod_ID, name), block);
+        return Registry.register(Registries.BLOCK, Identifier.of(EndReforged.MOD_ID, name), block);
     }
 
 
     private static void registerBlockItem(String name, Block block) {
-        Registry.register(Registries.ITEM, Identifier.of(EndReforged.Mod_ID, name),
+        Registry.register(Registries.ITEM, Identifier.of(EndReforged.MOD_ID, name),
                 new BlockItem(block, new Item.Settings()));
     }
 
     public static void registerModBlocks() {
-        EndReforged.LOGGER.info("Registering ModBlocks for " + EndReforged.Mod_ID);
+        EndReforged.LOGGER.info("Registering ModBlocks for " + EndReforged.MOD_ID);
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
             entries.add(ModBlocks.END_SLATE_BLOCK);
