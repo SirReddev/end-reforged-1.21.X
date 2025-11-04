@@ -20,7 +20,7 @@ public class ModBiomes {
 
     // FIX: Standardizing the key name to END_WILD across the mod
     public static final RegistryKey<Biome> END_WILDS = RegistryKey.of(RegistryKeys.BIOME,
-            Identifier.of(EndReforged.MOD_ID, "end_wild"));
+            Identifier.of(EndReforged.MOD_ID, "end_wilds"));
 
     /**
      * Called by the Fabric Data Generator (runData) to register the biome definition.

@@ -14,6 +14,7 @@ import net.minecraft.loot.function.SetCountLootFunction;
 import net.minecraft.loot.provider.number.UniformLootNumberProvider;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
+import net.reddev.end_reforged.block.ModBlocks;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -24,7 +25,9 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
     @Override
     public void generate() {
-
+        addDrop(ModBlocks.END_SLATE_BLOCK);
+        // addDrop(ModBlocks.ORE, oreDrops(ModBlocks.ore_drop));
+        // addDrop(ModBlocks.ORE, multipleOreDrops(ModBlocks.ORE, ModItems.ORE, 3, 7)); SEE BELOW
 
     }
 
