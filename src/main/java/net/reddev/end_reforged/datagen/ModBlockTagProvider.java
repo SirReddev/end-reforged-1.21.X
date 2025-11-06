@@ -23,8 +23,19 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.DEEP_LAYERED_END_ROCK_BLOCK)
                 .add(ModBlocks.END_MOSS_BLOCK)
                 .add(ModBlocks.GREEN_END_ROCK_BLOCK)
-                .add(ModBlocks.LAYERED_END_ROCK_BLOCK);
+                .add(ModBlocks.LAYERED_END_ROCK_BLOCK)
+                .add(ModBlocks.CHORUS_LEAVES_VARIANT_BLOCK)
+                .add(ModBlocks.CHORUS_LEAVES_OUTER_BLOCK)
+                .add(ModBlocks.CHORUS_LEAVES_BLOCK);
 
+
+        getOrCreateTagBuilder(BlockTags.LOGS_THAT_BURN)
+                .add(ModBlocks.CHORUS_LOG_BLOCK)
+                .add(ModBlocks.CHORUS_WOOD_BLOCK)
+                .add(ModBlocks.CHORUS_LOG_VARIANT1_BLOCK)
+                .add(ModBlocks.CHORUS_LOG_VARIANT2_BLOCK)
+                .add(ModBlocks.CHORUS_WOOD_VARIANT1_BLOCK)
+                .add(ModBlocks.CHORUS_WOOD_VARIANT2_BLOCK);
 
     }
 }

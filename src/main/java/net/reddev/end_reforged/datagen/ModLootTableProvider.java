@@ -25,7 +25,31 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
     @Override
     public void generate() {
-        addDrop(ModBlocks.END_SLATE_BLOCK);
+        // --- End Blocks (Standard Drop: Block itself) ---
+        this.addDrop(ModBlocks.END_NYLIUM_BLOCK);
+        this.addDrop(ModBlocks.END_SLATE_BLOCK);
+        this.addDrop(ModBlocks.DEEP_END_SLATE_BLOCK);
+        this.addDrop(ModBlocks.GREEN_END_ROCK_BLOCK);
+        this.addDrop(ModBlocks.DEEP_GREEN_END_ROCK_BLOCK);
+        this.addDrop(ModBlocks.LAYERED_END_ROCK_BLOCK);
+        this.addDrop(ModBlocks.DEEP_LAYERED_END_ROCK_BLOCK);
+        this.addDrop(ModBlocks.END_MOSS_BLOCK);
+
+// --- Log Blocks (Standard Drop: Block itself) ---
+        this.addDrop(ModBlocks.CHORUS_LOG_BLOCK);
+        this.addDrop(ModBlocks.CHORUS_LOG_VARIANT1_BLOCK);
+        this.addDrop(ModBlocks.CHORUS_LOG_VARIANT2_BLOCK);
+
+// --- Wood Blocks (Standard Drop: Block itself) ---
+        this.addDrop(ModBlocks.CHORUS_WOOD_BLOCK);
+        this.addDrop(ModBlocks.CHORUS_WOOD_VARIANT1_BLOCK);
+        this.addDrop(ModBlocks.CHORUS_WOOD_VARIANT2_BLOCK);
+
+// --- Special Case: Leaves (Need SHEARS_ONLY or specific items) ---
+        this.addDrop(ModBlocks.CHORUS_LEAVES_BLOCK, dropsWithShears(ModBlocks.CHORUS_LEAVES_BLOCK));
+        this.addDrop(ModBlocks.CHORUS_LEAVES_OUTER_BLOCK, dropsWithShears(ModBlocks.CHORUS_LEAVES_BLOCK));
+        this.addDrop(ModBlocks.CHORUS_LEAVES_VARIANT_BLOCK, dropsWithShears(ModBlocks.CHORUS_LEAVES_BLOCK));
+
         // addDrop(ModBlocks.ORE, oreDrops(ModBlocks.ore_drop));
         // addDrop(ModBlocks.ORE, multipleOreDrops(ModBlocks.ORE, ModItems.ORE, 3, 7)); SEE BELOW
 

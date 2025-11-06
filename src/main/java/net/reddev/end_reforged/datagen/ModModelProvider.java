@@ -22,33 +22,50 @@ public class ModModelProvider extends FabricModelProvider {
             ModBlocks.DEEP_END_SLATE_BLOCK,
             ModBlocks.GREEN_END_ROCK_BLOCK,
             ModBlocks.DEEP_GREEN_END_ROCK_BLOCK,
-            ModBlocks.END_SLATE_BLOCK
-
+            ModBlocks.END_SLATE_BLOCK,
+            ModBlocks.CHORUS_LEAVES_VARIANT_BLOCK,
+            ModBlocks.CHORUS_LEAVES_OUTER_BLOCK,
+            ModBlocks.CHORUS_LEAVES_BLOCK,
     };
 
-    // Blocks that use separate textures for top, bottom, side
-    private static final Block[] TOP_BOTTOM_SIDE_BLOCKS = new Block[] {
+    // Blocks that use separate textures for top, bottom, side, BUT ARE **NOT** PILLARS/LOGS
+    private static final Block[] CUBE_BOTTOM_TOP_BLOCKS = new Block[] {
             ModBlocks.END_NYLIUM_BLOCK,
             ModBlocks.LAYERED_END_ROCK_BLOCK,
             ModBlocks.DEEP_LAYERED_END_ROCK_BLOCK
     };
 
+    // --- NEW: Define your sapling blocks here ---
+    private static final Block[] SAPLING_BLOCKS = new Block[] {
+            ModBlocks.CHORUS_SAPLING, // Replace with your actual sapling block references
+    };
+    // ---------------------------------------------
+
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator generator) {
-        // Single texture blocks – use simple cube all
+        // Simple cube-all blocks
         for (Block block : SINGLE_TEXTURE_BLOCKS) {
             generator.registerSimpleCubeAll(block);
         }
 
-        // Blocks with top/bottom/side textures
-        for (Block block : TOP_BOTTOM_SIDE_BLOCKS) {
+        // Cube Bottom Top blocks
+        for (Block block : CUBE_BOTTOM_TOP_BLOCKS) {
             registerCubeBottomTopBlock(generator, block);
         }
+
+        // Sapling blocks: Delegate to the new sapling provider
+        for (Block block : SAPLING_BLOCKS) {
+            registerSaplingBlock(generator, block);
+        }
+
+        // LOG BLOCKS: Delegate to the dedicated directional provider class
+        ModDirectionalBlockModelProvider.registerAllPillarModels(generator);
     }
 
+    // Helper method for Blocks that use the standard CUBE_BOTTOM_TOP model (like Grass/Nylium)
     private void registerCubeBottomTopBlock(BlockStateModelGenerator generator, Block block) {
         Identifier blockId = Registries.BLOCK.getId(block);
-        String path = blockId.getPath();    // e.g., "end_nylium_block"
+        String path = blockId.getPath();
         String modId = blockId.getNamespace();
 
         String baseName = path.substring(0, path.lastIndexOf("_block"));
@@ -57,7 +74,6 @@ public class ModModelProvider extends FabricModelProvider {
         Identifier bottom = Identifier.of(modId, "block/" + baseName + "_bottom");
         Identifier side   = Identifier.of(modId, "block/" + baseName + "_side");
 
-        // Custom upload since there's no direct helper for bottom/top/side in BlockStateModelGenerator
         final Identifier modelId = Models.CUBE_BOTTOM_TOP.upload(
                 block,
                 new net.minecraft.data.client.TextureMap()
@@ -75,9 +91,18 @@ public class ModModelProvider extends FabricModelProvider {
         );
     }
 
+    // --- NEW: Helper method for Sapling blocks ---
+    private void registerSaplingBlock(BlockStateModelGenerator generator, Block block) {
+        // This helper method provided by Fabric handles both the blockstate and the item model.
+        // It uses the standard 'cross' model and expects a texture named "block/[block_id_path]"
+        // in your assets folder.
+        generator.registerTintableCross(block, BlockStateModelGenerator.TintType.NOT_TINTED);
+    }
+    // ---------------------------------------------
+
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
-        // Removed item model generation code.
+
     }
 
     @Override

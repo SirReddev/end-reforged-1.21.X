@@ -21,7 +21,7 @@
 		"fabric-datagen": [
 			"net.reddev.end_reforged.EndReforgedDataGenerator"
 		],
-      "Client": [
+      "client": [
         "net.reddev.end_reforged.EndReforgedClient"
       ],
       "terrablender": [

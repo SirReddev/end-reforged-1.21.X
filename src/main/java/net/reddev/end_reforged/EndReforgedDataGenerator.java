@@ -5,9 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecraft.data.report.BiomeParametersProvider;
 import net.minecraft.registry.RegistryBuilder;
 import net.minecraft.registry.RegistryKeys;
-import net.reddev.end_reforged.datagen.ModBlockTagProvider;
-import net.reddev.end_reforged.datagen.ModModelProvider;
-import net.reddev.end_reforged.datagen.ModWorldGenerator;
+import net.reddev.end_reforged.datagen.*;
 import net.reddev.end_reforged.world.ModConfiguredFeatures;
 import net.reddev.end_reforged.world.ModPlacedFeatures;
 import net.reddev.end_reforged.world.biome.ModBiomes;
@@ -19,8 +17,8 @@ public class EndReforgedDataGenerator implements DataGeneratorEntrypoint {
 
         pack.addProvider(ModWorldGenerator::new);
         pack.addProvider(ModBlockTagProvider::new);
-//      pack.addProvider(ModItemsTagProvider::new); NO ITEM TAGS USED YET
-//      pack.addProvider(ModLootTableProvider::new); NO LOOTTABLE USED YET
+        pack.addProvider(ModItemTagProvider::new);
+        pack.addProvider(ModLootTableProvider::new);
         pack.addProvider(ModModelProvider::new);
 //      pack.addProvider(ModRecipeProvider::new); NO SIMPEL BLOCK MODELS USED YET
 
