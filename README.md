@@ -17,7 +17,7 @@
 
 ### Screenshots
 
-![Screenshot 1](https://media.discordapp.net/attachments/771453831695040523/1434336768060035133/image.png?ex=6907f5b6&is=6906a436&hm=b9081823b01c6cf4ab9b6524f7bf8a30d923aabc73fbfd95408ff1ab85668dee&=&format=webp&quality=lossless)
+![Screenshot 1](https://media.discordapp.net/attachments/1020714349930754229/1435782134311813254/image.png?ex=690d37d0&is=690be650&hm=e40264d97b7d8e77b0d1d589a108a1a896d8256912308f9fa59daf7e59a931d7&=&format=webp&quality=lossless)
 
 ### Installation
 
